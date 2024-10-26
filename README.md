@@ -67,7 +67,7 @@ This project is a simple notification API system built with Node.js, Express, Po
 
 2. **Start the server**:
    ```bash
-   npm start
+   npm run dev
    ```
 
 3. The server should now be running at `http://localhost:3000`.
