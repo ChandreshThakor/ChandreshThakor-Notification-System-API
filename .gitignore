@@ -1,0 +1,46 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production build
+dist/
+build/
+
+# Database and Sequelize-related files
+*.sqlite
+*.sqlite3
+src/migrations/
+src/seeders/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Docker
+docker-compose.override.yml
+
+# Optional: Coverage output from tests
+coverage/
+
+# Ignore files from testing
+.jest/
