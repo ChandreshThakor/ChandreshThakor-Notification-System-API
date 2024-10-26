@@ -31,7 +31,7 @@ This project is a simple notification API system built with Node.js, Express, Po
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/ChandreshThakor/ChandreshThakor-Notification-System-API.git
-   cd notification-system
+   cd ChandreshThakor-Notification-System-API
    ```
 
 2. **Install dependencies**:
