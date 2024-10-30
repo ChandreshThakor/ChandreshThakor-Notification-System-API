@@ -1,0 +1,17 @@
+{
+    "errors": {
+        "requiredFields": "senderId, receiverId und Nachricht sind erforderlich",
+        "messageLength": "Die Nachrichtenlänge darf 255 Zeichen nicht überschreiten",
+        "receiverNotFound": "Empfänger nicht gefunden",
+        "sendFailed": "Benachrichtigung konnte nicht gesendet werden",
+        "notificationNotFound": "Benachrichtigung nicht gefunden",
+        "retrieveFailed": "Fehler beim Abrufen der Benachrichtigungen",
+        "updateFailed": "Fehler beim Aktualisieren der Benachrichtigung",
+        "markFailed": "Fehler beim Markieren der Benachrichtigungen als gelesen"
+    },
+    "success": {
+        "notificationSent": "Benachrichtigung gesendet",
+        "notificationMarkedRead": "Benachrichtigung als gelesen markiert",
+        "allNotificationsMarkedRead": "Alle Benachrichtigungen als gelesen markiert"
+    }
+}

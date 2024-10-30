@@ -1,0 +1,17 @@
+{
+    "errors": {
+        "requiredFields": "senderId, receiverId और message आवश्यक हैं",
+        "messageLength": "संदेश की लंबाई 255 वर्णों से अधिक नहीं हो सकती",
+        "receiverNotFound": "प्राप्तकर्ता नहीं मिला",
+        "sendFailed": "सूचना भेजने में विफल",
+        "notificationNotFound": "सूचना नहीं मिली",
+        "retrieveFailed": "सूचनाएं प्राप्त करने में विफल",
+        "updateFailed": "सूचना अपडेट करने में विफल",
+        "markFailed": "सूचनाओं को पढ़ा हुआ के रूप में चिह्नित करने में विफल"
+    },
+    "success": {
+        "notificationSent": "सूचना भेज दी गई",
+        "notificationMarkedRead": "सूचना पढ़ी हुई के रूप में चिह्नित की गई",
+        "allNotificationsMarkedRead": "सभी सूचनाएं पढ़ी हुई के रूप में चिह्नित की गईं"
+    }
+}

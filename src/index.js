@@ -6,11 +6,12 @@ const authRoutes = require('./routes/authRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
 const { initSocket } = require('./utils/socket'); // Adjust path as necessary
 require('dotenv').config();
-
+const i18n = require('./utils/i18nConfig');
 
 
 const app = express();
 app.use(express.json());
+app.use(i18n.init); 
 
 // Create HTTP server and Socket.IO server
 const server = http.createServer(app);

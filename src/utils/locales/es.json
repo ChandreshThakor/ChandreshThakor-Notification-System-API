@@ -1,0 +1,17 @@
+{
+    "errors": {
+        "requiredFields": "Se requieren senderId, receiverId y message",
+        "messageLength": "La longitud del mensaje no puede exceder los 255 caracteres",
+        "receiverNotFound": "Receptor no encontrado",
+        "sendFailed": "Error al enviar la notificación",
+        "notificationNotFound": "Notificación no encontrada",
+        "retrieveFailed": "Error al recuperar notificaciones",
+        "updateFailed": "Error al actualizar la notificación",
+        "markFailed": "Error al marcar notificaciones como leídas"
+    },
+    "success": {
+        "notificationSent": "Notificación enviada",
+        "notificationMarkedRead": "Notificación marcada como leída",
+        "allNotificationsMarkedRead": "Todas las notificaciones marcadas como leídas"
+    }
+}

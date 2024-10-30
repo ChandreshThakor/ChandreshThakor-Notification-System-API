@@ -1,0 +1,17 @@
+{
+    "errors": {
+        "requiredFields": "senderId, receiverId et message sont requis",
+        "messageLength": "La longueur du message ne peut pas dépasser 255 caractères",
+        "receiverNotFound": "Destinataire non trouvé",
+        "sendFailed": "Échec de l'envoi de la notification",
+        "notificationNotFound": "Notification non trouvée",
+        "retrieveFailed": "Échec de la récupération des notifications",
+        "updateFailed": "Échec de la mise à jour de la notification",
+        "markFailed": "Échec du marquage des notifications comme lues"
+    },
+    "success": {
+        "notificationSent": "Notification envoyée",
+        "notificationMarkedRead": "Notification marquée comme lue",
+        "allNotificationsMarkedRead": "Toutes les notifications marquées comme lues"
+    }
+}

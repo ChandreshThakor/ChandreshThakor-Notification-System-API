@@ -8,32 +8,31 @@ exports.sendNotification = async (req, res) => {
     const { senderId, receiverId, message } = req.body;
 
     if (!senderId || !receiverId || !message) {
-        return res.status(400).json({ message: 'senderId, receiverId, and message are required' });
+        return res.status(400).json({ message: res.__('errors.requiredFields') });
     }
 
     if (message.length > 255) {
-        return res.status(400).json({ message: 'Message length cannot exceed 255 characters' });
+        return res.status(400).json({ message: res.__('errors.messageLength') });
     }
 
     try {
         const receiver = await User.findByPk(receiverId);
-        if (!receiver) return res.status(404).json({ message: 'Receiver not found' });
+        if (!receiver) return res.status(404).json({ message: res.__('errors.receiverNotFound') });
 
         // Store the notification in the database
         const notification = await Notification.create({ senderId, receiverId, message });
 
         // Emit notification to the receiver
         const io = getSocket(); // Get the socket instance
-
         io.to(receiverId).emit('receive_notification', {
             senderId,
             message,
             notificationId: notification.id,
         });
 
-        res.status(201).json({ message: 'Notification sent', notification });
+        res.status(201).json({ message: res.__('success.notificationSent'), notification });
     } catch (err) {
-        res.status(500).json({ message: 'Failed to send notification', error: err.message });
+        res.status(500).json({ message: res.__('errors.sendFailed'), error: err.message });
     }
 };
 
@@ -55,7 +54,7 @@ exports.getNotifications = async (req, res) => {
             data: notifications.rows,
         });
     } catch (err) {
-        res.status(500).json({ message: 'Failed to retrieve notifications', error: err.message });
+        res.status(500).json({ message: res.__('errors.retrieveFailed'), error: err.message });
     }
 };
 
@@ -68,17 +67,17 @@ exports.markAsRead = async (req, res) => {
 
         notification.isRead = true;
         await notification.save();
-        res.status(200).json({ message: 'Notification marked as read', notification });
+        res.status(200).json({ message: res.__('success.notificationMarkedRead'), notification });
     } catch (err) {
-        res.status(500).json({ message: 'Failed to update notification', error: err.message });
+        res.status(500).json({ message: res.__('errors.updateFailed'), error: err.message });
     }
 };
 
 exports.markAllAsRead = async (req, res) => {
     try {
         await Notification.update({ isRead: true }, { where: { receiverId: req.user.userId, isRead: false } });
-        res.json({ message: 'All notifications marked as read' });
+        res.json({ message: res.__('success.allNotificationsMarkedRead') });
     } catch (err) {
-        res.status(500).json({ message: 'Failed to mark notifications as read', error: err.message });
+        res.status(500).json({ message: res.__('errors.markFailed'), error: err.message });
     }
 };
