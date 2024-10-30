@@ -31,7 +31,7 @@ This project is a simple notification API system built with Node.js, Express, Po
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/ChandreshThakor/ChandreshThakor-Notification-System-API.git
-   cd notification-system
+   cd ChandreshThakor-Notification-System-API
    ```
 
 2. **Install dependencies**:
@@ -58,19 +58,26 @@ This project is a simple notification API system built with Node.js, Express, Po
 
 ## Running the Application
 
-1. **Database Migration**:
+1. **Set Up Database**:
+   Create a new PostgreSQL database
+	
+   ```bash
+   createdb -U your_username database-name
+   ```
+
+2. **Database Migration**:
    Run Sequelize migrations to create the necessary tables:
 
    ```bash
    npx sequelize-cli db:migrate
    ```
 
-2. **Start the server**:
+3. **Start the server**:
    ```bash
-   npm start
+   npm run dev
    ```
 
-3. The server should now be running at `http://localhost:3000`.
+4. The server should now be running at `http://localhost:3000`.
 
 ---
 
