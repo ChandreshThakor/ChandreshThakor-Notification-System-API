@@ -102,6 +102,7 @@ This project is a simple notification API system built with Node.js, Express, Po
   {
     "username": "user123",
     "password": "password123"
+    "lang": "en"
   }
   ```
 - **Response**:
